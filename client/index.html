@@ -12,19 +12,31 @@
     <script src="scripts/app.js"></script>
   </head>
   <body>
-    <div id="main">
-      <button id="fetch">Fetch Messages</button>
-      <button id="clear">Clear Messages</button>
-      <h1>chatterbox</h1>
-      <!-- Your HTML goes here! -->
-      <div id="roomSelect"></div>
-      <div id="chats"></div>
-      <form name="message" id="message">
-        <textarea name="message"></textarea>
-        <div id="send">
-          <button class="submit" name="message" type="submit">post your message</button>
+
+    <header>
+      <div class="container">
+        <h1 class="logo"><a href="#">Chatterbox</a></h1>
+        <form name="message" id="message">
+          <textarea name="message"></textarea>
+          <div id="send">
+            <button class="submit" name="message" type="submit">post your message</button>
+          </div>
+        </form>
+      </div>
+      <section class="controls">
+        <div class="container">
+          <div id="roomSelect"><select><option>Lobby</option></select></div>
+          <button id="fetch">Fetch Messages</button>
+          <button id="clear">Clear Messages</button>
         </div>
-      </form>
-    </div>
+      </section>
+    </header>
+
+
+    <section class="messages">
+      <div class="container">
+        <div id="chats"></div>
+      </div>
+    </section>
   </body>
 </html>
