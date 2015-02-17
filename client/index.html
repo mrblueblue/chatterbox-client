@@ -7,6 +7,7 @@
     <!-- dependencies -->
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="bower_components/moment/min/moment.min.js"></script>
     <!-- your scripts -->
     <script src="env/config.js"></script>
     <script src="scripts/app.js"></script>
@@ -15,7 +16,7 @@
 
     <header>
       <div class="container">
-        <h1 class="logo"><a href="#">Chatterbox</a></h1>
+        <h1 class="logo"><a href="#">chatterbox</a></h1>
         <form name="message" id="message">
           <textarea name="message"></textarea>
           <div id="send">
@@ -25,7 +26,10 @@
       </div>
       <section class="controls">
         <div class="container">
-          <div id="roomSelect"><select><option>Lobby</option></select></div>
+          <div id="roomSelect">
+            <select>
+            </select>
+            </div>
           <button id="fetch">Fetch Messages</button>
           <button id="clear">Clear Messages</button>
         </div>
@@ -38,5 +42,32 @@
         <div id="chats"></div>
       </div>
     </section>
+
+    <div id="userselect" class="modal-container">
+      <div class="userselect modal-inner">
+        <a href="#" class="modal-close">X</a>
+        <h1>Welcome, please choose a name!</h1>
+        <form>
+          <input type="text" placeholder="What's your name?"></input>
+          <button type="submit">Apply</button>
+        </form>
+      </div>
+      <div class="overlay">
+      </div>
+    </div>
+
+    <div id="roomcreate" class="modal-container">
+      <div class="modal-inner">
+        <a href="#" class="modal-close">X</a>
+        <h1>Name your room!</h1>
+        <form>
+          <input type="text" placeholder="What's your room name?"></input>
+          <button type="submit">Apply</button>
+        </form>
+      </div>
+      <div class="overlay">
+      </div>
+    </div>
+
   </body>
 </html>
