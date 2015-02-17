@@ -4,17 +4,27 @@
     <meta charset="utf-8">
     <title>chatterbox</title>
     <link rel="stylesheet" href="styles/styles.css">
-
     <!-- dependencies -->
     <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
     <!-- your scripts -->
     <script src="env/config.js"></script>
     <script src="scripts/app.js"></script>
   </head>
   <body>
     <div id="main">
+      <button id="fetch">Fetch Messages</button>
+      <button id="clear">Clear Messages</button>
       <h1>chatterbox</h1>
       <!-- Your HTML goes here! -->
+      <div id="roomSelect"></div>
+      <div id="chats"></div>
+      <form name="message" id="message">
+        <textarea name="message"></textarea>
+        <div id="send">
+          <button class="submit" name="message" type="submit">post your message</button>
+        </div>
+      </form>
     </div>
   </body>
 </html>
